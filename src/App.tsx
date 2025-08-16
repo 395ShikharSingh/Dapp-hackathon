@@ -1,11 +1,9 @@
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
     WalletModalProvider,
     WalletDisconnectButton,
     WalletMultiButton
 } from '@solana/wallet-adapter-react-ui';
-import { clusterApiUrl } from '@solana/web3.js';
 import { TokenLaunchpad } from "./componentts/Token";
 import { Minting } from "./componentts/Minting";
 import { Balance } from "./componentts/Balance";
@@ -18,7 +16,6 @@ import '@solana/wallet-adapter-react-ui/styles.css';
 
 function App() {
   const [token, setToken] = useState<string | null>(null);
-  const [mintDone, setMintDone] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>('mint');
   const { connected } = useWallet();
 

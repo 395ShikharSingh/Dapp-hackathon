@@ -15,6 +15,7 @@ export function Balance() {
     const wallet = useWallet();
 
     const [solBalance, setSolBalance] = useState<number>(0);
+    //@ts-ignore
     const [tokenBalances, setTokenBalances] = useState<TokenBalance[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [errorMessage, setErrorMessage] = useState<string>('');
@@ -126,7 +127,7 @@ export function Balance() {
             fetchBalances();
         }
     }, [wallet.publicKey, wallet.connected]);
-
+    //@ts-ignore
     const formatBalance = (balance: number, decimals: number = 9) => {
         if (balance === 0) return '0';
         if (balance < 0.000001) return '< 0.000001';
