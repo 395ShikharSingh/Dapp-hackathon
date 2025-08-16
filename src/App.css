@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Custom styles for wallet adapter buttons */
+.wallet-adapter-button {
+  @apply !bg-blue-600 hover:!bg-blue-700 !text-white !font-semibold !rounded-lg !px-4 !py-2 !border-0;
+}
+
+.wallet-adapter-button-disconnect {
+  @apply !bg-gray-700 hover:!bg-gray-600 !text-white !font-semibold !rounded-lg !px-4 !py-2 !border-0;
+}
